@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!--required meta tags-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!--bootstrap CSS-->
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+
+		<!--font awesome CSS-->
+		<link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+
+		<style type="text/css">
+			
+
+
+		</style>
+		<title>Gradesheet</title>
+	</head>
+	<body >
+		<div class='container'>
+			<div class="row">
+				<!-- subjects -->
+				<div class="col-md-4">
+					<h4 class="my-1">Subject</h4>
+					<h5 class='my-1'>English</h5>
+					<h5 class='my-1'>Maths</h5>
+					<h5 class='my-1'>Chemistry</h5>
+					<h5 class='mt-2'>Biology</h5>
+					<h5 class='mt-2'>French</h5><br>
+
+					
+					<h5>TOTAL</h5>
+					<h5>Average</h5>
+					<h5>Remarks</h5>
+					
+					<button class="btn btn-danger" onclick="total(); average()">Get Result</button>
+				</div>
+						<!--  -->
+					<!-- scores -->
+				<div class="col-md-4">
+					<h5>Score</h5>
+					<input type="text" name="" onmouseout="english_score()" id="eng" class=''>
+					<input type="text" name="" onmouseout="maths_score()" id="math" class=''>
+					<input type="text" name="" onmouseout="chemistry_score()" id="che" class=''>
+					<input type="text" name="" onmouseout="biology_score()" id="bio" class=''>
+					<input type="text" name="" onmouseout="french_score()" id="fre"><br><br>
+					<h5 id="total-score"></h5>
+					<h5 id="average"></h5>
+					<h5 id='remark'></h5>
+				</div>
+
+				<!-- Grade -->
+				<div class="col-md-4">
+					<h5>Grade</h5>
+					<input type="text" name="" id="eng-grade">
+					<input type="text" name="" id="math-grade">
+					<input type="text" name="" id="che-grade">
+					<input type="text" name="" id="bio-grade">
+					<input type="text" name="" id="fre-grade"><br><!-- 
+					<img src="" class='img-fluid' alt="" id="img"> --><br><br>
+					<h5 id="tan" style='color:blue; font-size:4em;'></h5>
+					<h5 id="img" style='color:red; font-size:3em;'></h5>
+				</div>
+			</div>
+			
+		</div>
+
+
+
+		<!-- Scripts -->
+
+<script type="text/javascript">
+	function english_score(){
+		var eng = document.getElementById('eng').value;
+
+		if ( eng >= 70) {
+			document.getElementById('eng-grade').value = " A ";
+		}
+		else if (eng >=60 && eng <=69) {
+			document.getElementById('eng-grade').value = " B ";
+		}
+		else if (eng >=50 && eng < 60) {
+			document.getElementById('eng-grade').value = " C ";
+		}
+		else if (eng > 45 && eng < 50) {
+			document.getElementById('eng-grade').value = " D ";
+		}
+		else if (eng >= 40 && eng <=45) {
+			document.getElementById('eng-grade').value = " E ";
+		}
+		else  {
+			document.getElementById('eng-grade').value = " F ";
+		}
+	}
+
+	function maths_score(){
+		var math = document.getElementById('math').value;
+
+		if ( math >= 70) {
+			document.getElementById('math-grade').value = " A ";
+		}
+		else if (math >=60 && math <=69) {
+			document.getElementById('math-grade').value = " B ";
+		}
+		else if (math >=50 && math < 60) {
+			document.getElementById('math-grade').value = " C ";
+		}
+		else if (math > 45 && math < 50) {
+			document.getElementById('math-grade').value = " D ";
+		}
+		else if (math >= 40 && math <=45) {
+			document.getElementById('math-grade').value = " E ";
+		}
+		else  {
+			document.getElementById('math-grade').value = " F ";
+		}
+	}
+
+	function chemistry_score(){
+		var che = document.getElementById('che').value;
+
+		if ( che >= 70) {
+			document.getElementById('che-grade').value = " A ";
+		}
+		else if (che >=60 && che <=69) {
+			document.getElementById('che-grade').value = " B ";
+		}
+		else if (che >=50 && che < 60) {
+			document.getElementById('che-grade').value = " C ";
+		}
+		else if (che > 45 && che < 50) {
+			document.getElementById('che-grade').value = " D ";
+		}
+		else if (che >= 40 && che <=45) {
+			document.getElementById('che-grade').value = " E ";
+		}
+		else  {
+			document.getElementById('che-grade').value = " F ";
+		}
+	}
+	function biology_score(){
+		var bio = document.getElementById('bio').value;
+
+		if ( bio >= 70) {
+			document.getElementById('bio-grade').value = " A ";
+		}
+		else if (bio >=60 && bio <=69) {
+			document.getElementById('bio-grade').value = " B ";
+		}
+		else if (bio >=50 && bio < 60) {
+			document.getElementById('bio-grade').value = " C ";
+		}
+		else if (bio > 45 && bio < 50) {
+			document.getElementById('bio-grade').value = " D ";
+		}
+		else if (bio >= 40 && bio <=45) {
+			document.getElementById('bio-grade').value = " E ";
+		}
+		else  {
+			document.getElementById('bio-grade').value = " F ";
+		}
+	}
+	function french_score(){
+		var fre = document.getElementById('fre').value;
+
+		if ( fre >= 70) {
+			document.getElementById('fre-grade').value = " A ";
+		}
+		else if (fre >=60 && fre <=69) {
+			document.getElementById('fre-grade').value = " B ";
+		}
+		else if (fre >=50 && fre < 60) {
+			document.getElementById('fre-grade').value = " C ";
+		}
+		else if (fre > 45 && fre < 50) {
+			document.getElementById('fre-grade').value = " D ";
+		}
+		else if (fre >= 40 && fre <=45) {
+			document.getElementById('fre-grade').value = " E ";
+		}
+		else  {
+			document.getElementById('fre-grade').value = " F ";
+		}
+	}
+	function total(){
+		var eng = Number(document.getElementById('eng').value);
+		var math= Number(document.getElementById('math').value);
+		var  che= Number(document.getElementById('che').value);
+		var  bio= Number(document.getElementById('bio').value);
+		var  fre= Number(document.getElementById('fre').value);
+
+		if (eng=='' || math==''|| che==''|| bio==''|| fre=='') {
+			alert('all fields must be filled');
+		}
+		else{var total_score= eng + math + che + bio + fre;
+			document.getElementById('total-score').innerHTML= total_score;
+		}}
+
+	function average(){
+		var eng = Number(document.getElementById('eng').value);
+		var math= Number(document.getElementById('math').value);
+		var  che= Number(document.getElementById('che').value);
+		var  bio= Number(document.getElementById('bio').value);
+		var  fre= Number(document.getElementById('fre').value);
+
+		if (eng=='' || math==''|| che==''|| bio==''|| fre=='') {
+			alert('all fields must be filled');
+		}
+		else{var total_score= eng + math + che + bio + fre;
+			var avg = (total_score / 5);
+			document.getElementById('average').innerHTML= avg;
+
+			if (avg > 50){
+				document.getElementById('remark').innerHTML=' passed ';
+				//document.getElementById('img').src =' images/anita.jpg ';
+				document.getElementById('tan').innerHTML =' <i class="fas fa-handshake"></i> ';
+			}
+			else {document.getElementById('remark').innerHTML=' failed ';
+			//document.getElementById('img').src =' images/kate.jpg ';
+			document.getElementById('img').innerHTML =' <i class="fa fa-frown-open"></i> ';
+		}
+		}}
+</script>
+
+			<!-- Scripts end-->
+
+
+
+
+		<!--Javascript file-->
+			<script type="text/javascript" src='bootstrap/js/jquery-3.6.0.js'></script>
+			<!-- <script type="text/javascript" src='bootstrap/js/popper.min.js'></script> -->
+ 			<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
